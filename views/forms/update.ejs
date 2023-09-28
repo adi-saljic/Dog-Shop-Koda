@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KODA || Dog shop</title>
+        <link rel='stylesheet' href='/stylesheets/forms.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+        <body>
+        <div class="container">
+            <h2 class="naslov">Promjena podataka</h2>
+            <form method="post" action="/trgovac/updated/<%=podaci.id%>">
+            <div class="kupac-info">
+                <div class="input">
+                    <span class="details">Ime uzgajivacnice</span>
+                    <input type="text" value="<%= podaci.ime_uzgajivacnice%>" name="imeUzg">
+                </div>
+                <div class="input">
+                    <span class="details">Ime</span>
+                    <input type="text" value="<%= podaci.ime%>" name="ime">
+                </div>
+                <div class="input">
+                    <span class="details">Prezime</span>
+                    <input type="text" value="<%= podaci.prezime%>" name="prezime">
+                </div>
+                <div class="input">
+                    <span class="details">Grad</span>
+                    <input type="text" value="<%= podaci.grad%>" name="grad">
+                </div>
+                <div class="input">
+                    <span class="details">Drzava</span>
+                    <input type="text" value="<%= podaci.drzava%>" name="drzava">
+                </div>
+                <div class="input">
+                    <span class="details">Adresa stanovanja</span>
+                    <input type="text" value="<%= podaci.adresa_stanovanja%>" name="adresa">
+                </div>
+                <div class="input">
+                    <span class="details">Broj telefona</span>
+                    <input type="text" value="<%= podaci.broj_telefona%>" name="brTel">
+                </div>
+                <div class="input">
+                    <span class="details">Email</span>
+                    <input type="email" value="<%= podaci.email%>" name="email">
+                </div>
+                <div class="input">
+                    <span class="details">Lozinka</span>
+                    <input type="password" placeholder="Lozinka" name="password">
+                </div>
+                <div class="input">
+                    <span class="details">Opis</span>
+                    <textarea class="opis" rows="5" cols="35" type="text" name="opis"><%= podaci.opis%></textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Izmijeni podatke">
+            </div>
+                <div class="button">
+                    <a href="/trgovac/home/<%= podaci.id%>" class="txt-button">Nazad</a>
+                </div>
+
+        </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan' , sans-serif;
+}
+body{
+    background-image: url("../images/background.jpg");
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,#navbar li a.active{
+    color: #088178;
+}
+
+#mobile{display: none; align-items: center}
+#close{display: none}
+
+#hero{
+    background-image: url("../images/cute-puppy-chow-chow-thoroughbred-dog-runs-through-snow-pets_666637-247.webp");
+    height: 90vh;
+    width: 100%;
+    background-position: top 50% left 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#izdvojeno{
+    text-align: center;
+    padding: 40px 80px;
+}
+
+#izdvojeno .artikl-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dugme{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+.dugme:hover{
+    color: white;
+    background-color: #088178;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #E3E6F3;
+
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+@media (max-width: 799px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:  0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color:#E3E6F3 ;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center}
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px ;
+
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 14px;
+    }
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position:top 30% right 70%;
+    }
+
+}
+
+

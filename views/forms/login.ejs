@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KODA || Dog shop</title>
+    <link rel="stylesheet" href="/stylesheets/forms.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="naslov">Prijava</h2>
+      <form method="post" action="/trgovac/loged">
+        <div class="kupac-info">
+          <div class="input">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Email" name="email" />
+          </div>
+          <div class="input">
+            <span class="details">Lozinka</span>
+            <input type="password" placeholder="Lozinka" name="password" />
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Login" />
+        </div>
+        <% if(greska){%><span style="color: red"
+          >Pogresan email ili lozinka</span
+        >
+        <%}%> <% if(greska2){%>
+        <span style="color: red"
+          >Banovani ste! Za više informacija kontaktirajte nas.</span
+        >
+        <%}%>
+        <a href="/trgovac/register" class="txt-button">Registracija</a>
+        <div class="button">
+          <a href="/" class="txt-button">Nazad na početnu</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

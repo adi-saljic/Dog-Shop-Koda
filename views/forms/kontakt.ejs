@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KODA || Dog shop</title>
+        <link rel='stylesheet' href='/stylesheets/forms.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+        <body>
+        <div class="container">
+            <h2 class="naslov">Kontaktirajte nas</h2>
+            <form method="post" action="/poslano" >
+            <div class="kupac-info">
+
+                <div class="input">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+                <div class="input" style="width: 100%">
+                    <span class="details">Naslov</span>
+                    <input type="text" placeholder="Naslov" name="naslov">
+                </div>
+                <div class="input" style="width: 100%">
+                    <span class="details">Tekst</span>
+                    <textarea class="opis" style="width: 100%; height: 200px;" type="text" placeholder="Unesite vasu poruku ovdje" name="tekst"></textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Posalji">
+            </div>
+                <div class="button">
+                    <a href="/" class="txt-button">Nazad na početnu</a>
+                </div>
+                <%if(greska1){%><span style="color: red">Sva polja moraju biti popunjena!!</span><%}%>
+        </form>
+        </div>
+    </body>
+</html>

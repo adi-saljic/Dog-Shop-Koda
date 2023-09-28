@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KODA || Dog shop</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#" class="logo"><img src="/images/logo.png" style="width: 65px; height: 65px"></a>
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="#">Početna stranica</a></li>
+          <li><a href="/trgovac/dodajPsa/<%=info.id%>">Dodaj psa</a></li>
+          <li><a href="/trgovac/update/<%=info.id%>">Moji podaci</a></li>
+          <li><a href="/trgovac/logout">Odjavi se</a></li>
+          <li href="#" id="close">Back</li>
+        </ul>
+      </div>
+      <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="hero">
+      <h2><%= info.ime_uzgajivacnice%></h2>
+      <h1>Dobrodošli </h1>
+      <p>Za sve informacije i nejasnoće kontaktirajte admina preko forme, mail adrese ili nazovite naš broj.</p>
+    </section>
+
+    <section id="izdvojeno">
+      <%if(psi.length === 0){%>
+        <h2>Trenutno nemate pasa u ponudi</h2>
+      <%}else{%>
+      <h2>Moji psi</h2>
+
+
+      <div class="artikl-container">
+        <% for(let i = 0; i < psi.length ; i++){%>
+        <div class="artikl">
+          <%if(psi[i].slika === null){%>
+          <img src="/images/laptops_product_page.jpg" />
+          <%}else{%>
+          <img src="/images/<%=psi[i].slika%>" />
+          <%}%>
+          <div class="opis">
+            <span>Ime uzgajivacnice: <%=psi[i].uzgajivac%></span>
+            <h5>Rasa: <%= psi[i].rasa%></h5>
+            <h4><%=psi[i].cijena%> KM</h4>
+
+              <a href="/trgovac/updatePsa/<%=info.id%>/<%=psi[i].id_psa%>" class="txt-button">Uredi</a>
+
+          </div>
+        </div>
+        <%}%>
+      </div>
+      <%}%>
+    </section>
+
+    <footer>
+      <div class="col">
+        <a class="logo"><%=footer.name%></a>
+      </div>
+      <div class="kontakt">
+        <h4>Kontakt</h4>
+        <p>Email: <%= footer.email%></p>
+        <p>Mob: <%= footer.tel%></p>
+      </div>
+      <div class="copyright">
+        <p>Ⓒ 2022, Adi Saljic - DOG SHOP KODA</p>
+      </div>
+    </footer>
+
+    <script>
+      const bar = document.getElementById("bar");
+      const nav = document.getElementById("navbar");
+      const close = document.getElementById("close");
+
+      if (bar) {
+        bar.addEventListener("click", () => {
+          nav.classList.add("active");
+        });
+      }
+
+      if (close) {
+        close.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      }
+    </script>
+  </body>
+</html>

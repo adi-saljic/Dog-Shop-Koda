@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KODA || Dog shop</title>
+    <link rel="stylesheet" href="/stylesheets/rasa.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <a href="/" class="logo"><img src="/images/logo.png" style="width: 65px; height: 65px"></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="/">Početna stranica</a></li>
+          <li><a href="/proizvodi">Psi u ponudi</a></li>
+          <!--      <li><a href="/blog">Blog</a></li>-->
+          <li><a href="rase/sveRase">Rase</a></li>
+          <li><a href="/about">O nama</a></li>
+          <li><a href="/kontakt">Kontakt</a></li>
+          <li><a href="/trgovac/login">Prijavi se</a></li>
+          <li href="#" id="close">Back</li>
+        </ul>
+      </div>
+      <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="detalji">
+      <div class="single-pro-image">
+        <%if(rasa.slika === ''){%>
+        <img
+          src="/images/laptops_product_page.jpg"
+          width="100%"
+          id="glavnaSlika"
+        />
+        <%}else{%>
+        <img src="/images/<%=rasa.slika%>" width="100%" id="glavnaSlika" />>
+        <%}%>
+      </div>
+      <div class="single-pro-details">
+        <h2><%=rasa.ime%></h2>
+        <h4>Opis rase:</h4>
+        <span><%=rasa.glavne_karakteristike%></span>
+      </div>
+    </section>
+
+    <section id="karakteristike">
+      <div class="wrapper">
+        <div class="head">
+          <div class="karakteristika">
+            <h3><%=naslovi[0]%></h3>
+          </div>
+          <div class="ocjena">
+            <%for(let k=0; k<5; k++){ if(rasa.prilagodljivost > k){%>
+            <i class="fas fa-star star_gold"></i>
+            <%}else{%>
+            <i class="fas fa-star star_gray"></i>
+            <%}}%>
+          </div>
+        </div>
+        <div class="body">
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[0]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.zivot_u_stanu > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[1]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if( rasa.pogodan_za_nove_vlasnike >
+              k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[2]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.osjetljivost > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[3]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.tolerise_usamljenost > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[4]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.otpornost_na_hladnocu >k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[5]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.otpornost_na_toplotu > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="head">
+          <div class="karakteristika">
+            <h3><%=naslovi[1]%></h3>
+          </div>
+          <div class="ocjena">
+            <%for(let k=0; k<5; k++){ if(rasa.sveukupna_ljubaznost > k){%>
+            <i class="fas fa-star star_gold"></i>
+            <%}else{%>
+            <i class="fas fa-star star_gray"></i>
+            <%}}%>
+          </div>
+        </div>
+        <div class="body">
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[6]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.vjeran_obitelji > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[7]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if( rasa.pogodan_za_djecu > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[8]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.prijateljstvo_sa_psima > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[9]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.prijateljstvo_sa_strancima >
+              k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="head">
+          <div class="karakteristika">
+            <h3><%=naslovi[2]%></h3>
+          </div>
+          <div class="ocjena">
+            <%for(let k=0; k<5; k++){ if(rasa.zdravlje_uredjivanje > k){%>
+            <i class="fas fa-star star_gold"></i>
+            <%}else{%>
+            <i class="fas fa-star star_gray"></i>
+            <%}}%>
+          </div>
+        </div>
+        <div class="body">
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[10]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.linjanje > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[11]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if( rasa.koliko_slini > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[12]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.njega_dlake > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[13]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.zdravlje > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[14]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.potencijal_debljanja >k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[15]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.velicina > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="head">
+          <div class="karakteristika">
+            <h3><%=naslovi[3]%></h3>
+          </div>
+          <div class="ocjena">
+            <%for(let k=0; k<5; k++){ if(rasa.mogucnost_treniranja > k){%>
+            <i class="fas fa-star star_gold"></i>
+            <%}else{%>
+            <i class="fas fa-star star_gray"></i>
+            <%}}%>
+          </div>
+        </div>
+        <div class="body">
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[16]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.pogodan_za_treniranje > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[17]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if( rasa.inteligencija > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[18]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.sposobnost_lova > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[19]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.glasnost > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[20]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.mogucnost_lutanja >k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="head">
+          <div class="karakteristika">
+            <h3><%=naslovi[4]%></h3>
+          </div>
+          <div class="ocjena">
+            <%for(let k=0; k<5; k++){ if(rasa.fizicke_potrebe > k){%>
+            <i class="fas fa-star star_gold"></i>
+            <%}else{%>
+            <i class="fas fa-star star_gray"></i>
+            <%}}%>
+          </div>
+        </div>
+        <div class="body">
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[21]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.nivo_energije > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[22]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if( rasa.potreba_za_kretanjem > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+          <div class="body-wrapper">
+            <div class="karakteristika">
+              <h5><%=osobine[23]%></h5>
+            </div>
+            <div class="ocjena">
+              <%for(let k=0; k<5; k++){ if(rasa.volja_za_igrom > k){%>
+              <i class="fas fa-star star_gold"></i>
+              <%}else{%>
+              <i class="fas fa-star star_gray"></i>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vital-wrapper">
+        <div class="vital-one">
+          <h3>Grupa:</h3>
+          <i class="fas fa-dog fa-3x"></i>
+          <span><%=rasa.grupa%></span>
+        </div>
+        <div class="vital-one">
+          <h3>Visina:</h3>
+          <i class="fas fa-ruler-vertical fa-3x"></i>
+          <span><%=rasa.visina%></span>
+        </div>
+        <div class="vital-one">
+          <h3>Težina:</h3>
+          <i class="fas fa-weight fa-3x"></i>
+          <span><%=rasa.tezina%></span>
+        </div>
+        <div class="vital-one">
+          <h3>Životni vijek:</h3>
+          <i class="fas fa-heartbeat fa-3x"></i>
+          <span><%=rasa.zivotni_vijek%></span>
+        </div>
+      </div>
+
+      <div class="opis-wrapper">
+        <p><%=rasa.detaljan_opis%></p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="col">
+        <a class="logo"><%=footer.name%></a>
+      </div>
+      <div class="kontakt">
+        <h4>Kontakt</h4>
+        <p>Email: <%= footer.email%></p>
+        <p>Mob: <%= footer.tel%></p>
+      </div>
+      <div class="copyright">
+        <p>Ⓒ 2022, Adi Saljic - DOG SHOP KODA</p>
+      </div>
+    </footer>
+
+    <script>
+      const bar = document.getElementById("bar");
+      const nav = document.getElementById("navbar");
+      const close = document.getElementById("close");
+
+      if (bar) {
+        bar.addEventListener("click", () => {
+          nav.classList.add("active");
+        });
+      }
+
+      if (close) {
+        close.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      }
+    </script>
+  </body>
+</html>

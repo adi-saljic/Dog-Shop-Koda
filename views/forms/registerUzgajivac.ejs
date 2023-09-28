@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KODA || Dog shop</title>
+        <link rel='stylesheet' href='/stylesheets/forms.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+        <body>
+        <div class="container">
+            <h2 class="naslov">Registracija</h2>
+            <form method="post" action="/trgovac/registered">
+            <div class="kupac-info">
+                <div class="input">
+                    <span class="details">Ime uzgajivacnice</span>
+                    <input type="text" placeholder="Ime" name="imeUzg">
+                </div>
+                <div class="input">
+                    <span class="details">Ime</span>
+                    <input type="text" placeholder="Ime" name="ime">
+                </div>
+                <div class="input">
+                    <span class="details">Prezime</span>
+                    <input type="text" placeholder="Prezime" name="prezime">
+                </div>
+                <div class="input">
+                    <span class="details">Grad</span>
+                    <input type="text" placeholder="Grad" name="grad">
+                </div>
+                <div class="input">
+                    <span class="details">Drzava</span>
+                    <input type="text" placeholder="Drzava" name="drzava">
+                </div>
+                <div class="input">
+                    <span class="details">Adresa stanovanja</span>
+                    <input type="text" placeholder="Adresa stanovanja" name="adresa">
+                </div>
+                <div class="input">
+                    <span class="details">Broj telefona</span>
+                    <input type="text" placeholder="Broj telefona" name="brTel">
+                </div>
+                <div class="input">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+                <div class="input">
+                    <span class="details">Lozinka</span>
+                    <input type="password" placeholder="Lozinka" name="password">
+                </div>
+                <div class="input">
+                    <span class="details">Opis</span>
+                    <textarea class="opis" rows="5" cols="35" type="text" placeholder="Opisite vasu uzgajivacnicu" name="opis"> </textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+                <%if(greska1){%><span style="color: red">Sva polja moraju biti popunjena!!</span><%}%>
+                <%if(greska2){%><span style="color: red">Email je vec iskoristen!!</span><%}%>
+                <div class="button">
+                    <a href="/trgovac/login" class="txt-button">Nazad</a>
+                </div>
+
+        </form>
+        </div>
+    </body>
+</html>

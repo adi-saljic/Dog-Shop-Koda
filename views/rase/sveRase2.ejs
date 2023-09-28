@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KODA || Dog shop</title>
+  <link rel="stylesheet" href="/stylesheets/sveRase.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<section id="header">
+  <a href="/" class="logo"><img src="/images/logo.png" style="width: 65px; height: 65px"></a>
+  <div>
+    <ul id="navbar" >
+      <li><a href="/">Početna stranica</a></li>
+      <li ><a href="/proizvodi">Psi u ponudi</a></li>
+<!--      <li><a href="/blog">Blog</a></li>-->
+      <li><a href="rase/sveRase" class="active">Rase</a></li>
+      <li><a href="/about">O nama</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/trgovac/login">Prijavi se</a></li>
+      <li href="#" id="close">Back</li>
+    </ul>
+  </div>
+  <div id="mobile">
+    <i id="bar" class="fas fa-outdent" ></i>
+  </div>
+</section>
+<section id="abc">
+  <%const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];%>
+  <div>
+    <ul id="page-navbar">
+      <%
+      for(let i = 0; i < alphabet.length/2; i++){%>
+      <%if(i===alphabet.length/2){%><br><%}%>
+      <li><a href="#<%=alphabet[i]%>"><%=alphabet[i] %></a> </li>
+      <%}%>
+    </ul>
+    <ul id="page-navbar">
+      <%
+      for(let i = alphabet.length/2; i < alphabet.length; i++){%>
+      <%if(i===alphabet.length/2){%><br><%}%>
+      <li><a href="#<%=alphabet[i]%>"><%=alphabet[i] %></a> </li>
+      <%}%>
+    </ul>
+  </div>
+
+</section>
+
+
+
+
+<section id="izdvojeno">
+  <div id="A">
+    <h2>A</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<A.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=A[i].id_rase%>'">
+        <%if(A[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=A[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=A[i].tezina%></span>
+          <h5>Visina: <%=A[i].visina%></h5>
+          <h4><%=A[i].ime%></h4>
+          <span>Životni vijek: <%=A[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="B">
+    <h2>B</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<B.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=B[i].id_rase%>'">
+        <%if(B[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=B[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=B[i].tezina%></span>
+          <h5>Visina: <%=B[i].visina%></h5>
+          <h4><%=B[i].ime%></h4>
+          <span>Životni vijek: <%=B[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="C">
+    <h2>C</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<C.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=C[i].id_rase%>'">
+        <%if(C[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=C[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=C[i].tezina%></span>
+          <h5>Visina: <%=C[i].visina%></h5>
+          <h4><%=C[i].ime%></h4>
+          <span>Životni vijek: <%=C[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="D">
+    <h2>D</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<D.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=D[i].id_rase%>'">
+        <%if(D[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=D[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=D[i].tezina%></span>
+          <h5>Visina: <%=D[i].visina%></h5>
+          <h4><%=D[i].ime%></h4>
+          <span>Životni vijek: <%=D[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="E">
+    <h2>E</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<E.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=E[i].id_rase%>'">
+        <%if(E[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=E[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=E[i].tezina%></span>
+          <h5>Visina: <%=E[i].visina%></h5>
+          <h4><%=E[i].ime%></h4>
+          <span>Životni vijek: <%=E[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="F">
+    <h2>F</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<F.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=F[i].id_rase%>'">
+        <%if(F[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=F[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=F[i].tezina%></span>
+          <h5>Visina: <%=F[i].visina%></h5>
+          <h4><%=F[i].ime%></h4>
+          <span>Životni vijek: <%=F[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="G">
+    <h2>G</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<G.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=G[i].id_rase%>'">
+        <%if(G[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=G[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=G[i].tezina%></span>
+          <h5>Visina: <%=G[i].visina%></h5>
+          <h4><%=G[i].ime%></h4>
+          <span>Životni vijek: <%=G[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="H">
+    <h2>H</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<H.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=H[i].id_rase%>'">
+        <%if(H[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=H[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=H[i].tezina%></span>
+          <h5>Visina: <%=H[i].visina%></h5>
+          <h4><%=H[i].ime%></h4>
+          <span>Životni vijek: <%=H[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="I">
+    <h2>I</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<I.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=I[i].id_rase%>'">
+        <%if([I].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=I[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=I[i].tezina%></span>
+          <h5>Visina: <%=I[i].visina%></h5>
+          <h4><%=I[i].ime%></h4>
+          <span>Životni vijek: <%=I[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="J">
+    <h2>J</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<J.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=J[i].id_rase%>'">
+        <%if(J[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=J[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=J[i].tezina%></span>
+          <h5>Visina: <%=J[i].visina%></h5>
+          <h4><%=J[i].ime%></h4>
+          <span>Životni vijek: <%=J[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="K">
+    <h2>K</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<K.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=K[i].id_rase%>'">
+        <%if(D[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=K[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=K[i].tezina%></span>
+          <h5>Visina: <%=K[i].visina%></h5>
+          <h4><%=K[i].ime%></h4>
+          <span>Životni vijek: <%=K[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="L">
+    <h2>L</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<L.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=L[i].id_rase%>'">
+        <%if(L[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=L[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=L[i].tezina%></span>
+          <h5>Visina: <%=L[i].visina%></h5>
+          <h4><%=L[i].ime%></h4>
+          <span>Životni vijek: <%=L[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="M">
+    <h2>M</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<M.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=M[i].id_rase%>'">
+        <%if(M[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=M[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=M[i].tezina%></span>
+          <h5>Visina: <%=M[i].visina%></h5>
+          <h4><%=M[i].ime%></h4>
+          <span>Životni vijek: <%=M[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="N">
+    <h2>N</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<N.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=N[i].id_rase%>'">
+        <%if(D[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=N[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=N[i].tezina%></span>
+          <h5>Visina: <%=N[i].visina%></h5>
+          <h4><%=N[i].ime%></h4>
+          <span>Životni vijek: <%=N[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="O">
+    <h2>O</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<O.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=O[i].id_rase%>'">
+        <%if(O[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=O[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=O[i].tezina%></span>
+          <h5>Visina: <%=O[i].visina%></h5>
+          <h4><%=O[i].ime%></h4>
+          <span>Životni vijek: <%=O[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="P">
+    <h2>P</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<P.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=P[i].id_rase%>'">
+        <%if(P[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=P[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=P[i].tezina%></span>
+          <h5>Visina: <%=P[i].visina%></h5>
+          <h4><%=P[i].ime%></h4>
+          <span>Životni vijek: <%=P[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="R">
+    <h2>R</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<R.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=R[i].id_rase%>'">
+        <%if(R[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=R[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=R[i].tezina%></span>
+          <h5>Visina: <%=R[i].visina%></h5>
+          <h4><%=R[i].ime%></h4>
+          <span>Životni vijek: <%=R[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="S">
+    <h2>S</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<S.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=S[i].id_rase%>'">
+        <%if(S[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=S[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=S[i].tezina%></span>
+          <h5>Visina: <%=S[i].visina%></h5>
+          <h4><%=S[i].ime%></h4>
+          <span>Životni vijek: <%=S[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="T">
+    <h2>T</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<T.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=T[i].id_rase%>'">
+        <%if(T[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=T[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=T[i].tezina%></span>
+          <h5>Visina: <%=T[i].visina%></h5>
+          <h4><%=T[i].ime%></h4>
+          <span>Životni vijek: <%=T[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="U">
+    <h2>U</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<U.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=U[i].id_rase%>'">
+        <%if(U[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=U[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=U[i].tezina%></span>
+          <h5>Visina: <%=U[i].visina%></h5>
+          <h4><%=U[i].ime%></h4>
+          <span>Životni vijek: <%=U[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="V">
+    <h2>V</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<V.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=V[i].id_rase%>'">
+        <%if(V[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=V[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=V[i].tezina%></span>
+          <h5>Visina: <%=V[i].visina%></h5>
+          <h4><%=V[i].ime%></h4>
+          <span>Životni vijek: <%=V[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="W">
+    <h2>W</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<W.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=W[i].id_rase%>'">
+        <%if(W[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=W[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=W[i].tezina%></span>
+          <h5>Visina: <%=W[i].visina%></h5>
+          <h4><%=W[i].ime%></h4>
+          <span>Životni vijek: <%=W[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="X">
+    <h2>X</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<X.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=X[i].id_rase%>'">
+        <%if(X[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=X[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=X[i].tezina%></span>
+          <h5>Visina: <%=X[i].visina%></h5>
+          <h4><%=X[i].ime%></h4>
+          <span>Životni vijek: <%=X[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="Y">
+    <h2>Y</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<Y.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=Y[i].id_rase%>'">
+        <%if(Y[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=Y[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=Y[i].tezina%></span>
+          <h5>Visina: <%=Y[i].visina%></h5>
+          <h4><%=Y[i].ime%></h4>
+          <span>Životni vijek: <%=Y[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <div id="Z">
+    <h2>Z</h2>
+    <div class="artikl-container" >
+      <%for(let i=0; i<Z.length; i++){%>
+      <div class="artikl" onclick="window.location.href = '/rase/rasa/<%=Z[i].id_rase%>'">
+        <%if(Z[i].slika === ''){%>
+          <img src="/images/laptops_product_page.jpg">
+        <%}else{%>
+        <img src="/images/<%=Z[i].slika%>" >
+        <%}%>
+        <div class="opis">
+          <span>Težina: <%=Z[i].tezina%></span>
+          <h5>Visina: <%=Z[i].visina%></h5>
+          <h4><%=Z[i].ime%></h4>
+          <span>Životni vijek: <%=Z[i].zivotni_vijek%></span>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+<footer>
+  <div class="col">
+    <a class="logo"><%=footer.name%></a>
+  </div>
+  <div class="kontakt"><h4>Kontakt</h4>
+    <p>Email: <%= footer.email%></p>
+    <p>Mob: <%= footer.tel%></p></div>
+  <div class="copyright">
+    <p>Ⓒ 2022, Adi Saljic - DOG SHOP KODA</p>
+  </div>
+</footer>
+
+<script>
+  const bar = document.getElementById('bar');
+  const nav = document.getElementById('navbar');
+  const close = document.getElementById('close');
+
+  if(bar){
+    bar.addEventListener('click', () => {
+      nav.classList.add('active');
+    })
+  }
+
+  if(close){
+    close.addEventListener('click', () => {
+      nav.classList.remove('active');
+    })
+  }
+
+
+</script>
+
+
+
+
+</body>
+</html>

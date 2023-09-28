@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KODA || Dog shop</title>
+        <link rel='stylesheet' href='/stylesheets/forms.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
+    </head>
+
+        <body>
+        <div class="container">
+            <h2 class="naslov">Dodaj novog psa</h2>
+            <form method="post" action="/trgovac/dodan/<%=podaci.id%> " enctype="multipart/form-data">
+            <div class="kupac-info">
+                <div class="input">
+                    <span class="details">Ime*</span>
+                    <input type="text" placeholder="Ime" name="ime">
+                    <span style="font-size: 10px">U slucaju da psu niste dali ime upisite "Nepoznato"</span>
+                </div>
+                <div class="input">
+                    <span class="details">Rasa*</span>
+                    <select name="rasa">
+                        <%for(let i = 0; i<rase.length; i++){%>
+                        <option value=<%=rase[i].id_rase%>><%=rase[i].ime%></option>
+                        <%}%>
+                    </select>
+                </div>
+                <div class="input">
+                    <span class="details">Cijena*</span>
+                    <input type="number" placeholder="Cijena" name="cijena">
+                </div>
+                <div class="input">
+                    <span class="details">Datum rodjenja*</span>
+                    <input type="date" placeholder="Datum rodjenja" name="datum_rodjenja">
+                </div>
+                <div class="input">
+                    <span class="details">Spol*</span>
+                    <select name = "spol">
+                        <option value="M">M</option>
+                        <option value="Ž">Ž</option>
+                    </select>
+                </div>
+                <div  style="text-align: center; padding: 3%; border:  thin solid black; width: 100%; margin: 5px">
+                    <label for="inputTag" style="cursor: pointer">
+                        Unesite sliku <br/>
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input id="inputTag" type="file" accept="image/*/" style="display: none" name="slika"/>
+                        <br/>
+                        <span id="imageName" style="color: #088178"></span>
+                    </label>
+                </div>
+
+<!--                <div >-->
+<!--                    <label for="formFile" class="form-label">Dodajte sliku</label>-->
+<!--                    <input class="form-control"  type="file" name="sampleFile" accept="image/*/">-->
+<!--                </div>-->
+                <div class="input" style="width: 100%;">
+                    <span class="details">Opis*</span>
+                    <textarea class="opis" rows="5" cols="35" type="text" name="opis" style="height: 100px"> </textarea>
+                </div>
+                <div class="input" style="width: 100%">
+                    <span class="details">Mjesanac</span>
+                    <input type="text" placeholder="U slucaju da je pas mjesanac unijeti sve rase" name="mjesanac">
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Spasi">
+            </div>
+                <%if(greska){%>
+                <span style="color: red">Sva polja oznacena sa "*" su obavezna!</span>
+                <%}%>
+                <div class="button">
+
+                    <a href="/trgovac/home/<%= podaci.id%>">Nazad</a>
+                </div>
+
+        </form>
+        </div>
+
+
+    </body>
+</html>

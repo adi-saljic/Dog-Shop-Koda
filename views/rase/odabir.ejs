@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KODA || Dog shop</title>
+        <link rel='stylesheet' href='/stylesheets/odabir.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+        <body>
+        <div class="container">
+            <h2 class="naslov">Preporučujemo rasu prema vašim potrebama</h2>
+            <form method="post" action="/rase/odabran">
+            <div class="kupac-info">
+                <div class="input">
+                    <span class="details">Život u stanu</span>
+                    <input type="checkbox" name="kategorija"  value="zivot_u_stanu">
+                </div>
+                <div class="input">
+                    <span class="details">Pogodan za nove vlasnike</span>
+                    <input type="checkbox" name="kategorija"  value="pogodan_za_nove_vlasnike">
+                </div>
+                <div class="input">
+                    <span class="details">Toleriše usamljenost</span>
+                    <input type="checkbox" name="kategorija"  value="tolerise_usamljenost">
+                </div>
+                <div class="input">
+                    <span class="details">Otporan na hladnoću</span>
+                    <input type="checkbox" name="kategorija"  value="otpornost_na_hladnocu">
+                </div>
+                <div class="input">
+                    <span class="details">Otporan na toplotu</span>
+                    <input type="checkbox" name="kategorija"  value="otpornost_na_toplotu">
+                </div>
+                <div class="input">
+                    <span class="details">Vjeran porodici</span>
+                    <input type="checkbox" name="kategorija"  value="vjeran_obitelji">
+                </div>
+                <div class="input">
+                    <span class="details">Pogodan za djecu</span>
+                    <input type="checkbox" name="kategorija"  value="pogodan_za_djecu">
+                </div>
+                <div class="input">
+                    <span class="details">Društven sa psima</span>
+                    <input type="checkbox" name="kategorija"  value="prijateljstvo_sa_psima">
+                </div>
+                <div class="input">
+                    <span class="details">Društven sa strancima</span>
+                    <input type="checkbox" name="kategorija"  value="prijateljstvo_sa_strancima">
+                </div>
+                <div class="input">
+                    <span class="details">Malo se linja</span>
+                    <input type="checkbox" name="kategorija2"  value="linjanje">
+                </div>
+                <div class="input">
+                    <span class="details">Malo slini</span>
+                    <input type="checkbox" name="kategorija2"  value="koliko_slini">
+                </div>
+                <div class="input">
+                    <span class="details">Mala mogućnost debljanja</span>
+                    <input type="checkbox" name="kategorija2"  value="potencijal_debljanja">
+                </div>
+                <div class="input">
+                    <span class="details">Pogodan za treniranje</span>
+                    <input type="checkbox" name="kategorija"  value="pogodan_za_treniranje">
+                </div>
+                <div class="input">
+                    <span class="details">Sposoban za lov</span>
+                    <input type="checkbox" name="kategorija"  value="sposobnost_lova">
+                </div>
+                <div class="input">
+                    <span class="details">Tih</span>
+                    <input type="checkbox" name="kategorija2"  value="glasnost">
+                </div>
+                <div class="input">
+                    <span class="details">Mala mogućnost lutanja</span>
+                    <input type="checkbox" name="kategorija2"  value="mogucnost_lutanja">
+                </div>
+                <div class="input">
+                    <span class="details">Energičan</span>
+                    <input type="checkbox" name="kategorija"  value="nivo_energije">
+                </div>
+                <div class="input">
+                    <span class="details">Velika potreba za kretanjem</span>
+                    <input type="checkbox" name="kategorija"  value="potreba_za_kretanjem">
+                </div>
+                <div class="input">
+                    <span class="details">Mala potreba za kretanjem</span>
+                    <input type="checkbox" name="kategorija2"  value="potreba_za_kretanjem">
+                </div>
+                <div class="input">
+                    <span class="details">Velika volja za igrom</span>
+                    <input type="checkbox" name="kategorija"  value="volja_za_igrom">
+                </div>
+                <div class="input">
+                    <span class="details">Jako mali</span>
+                    <input type="checkbox" name="kategorija3"  value="jako_mali">
+                </div>
+                <div class="input">
+                    <span class="details">Mali</span>
+                    <input type="checkbox" name="kategorija3"  value="mali">
+                </div>
+                <div class="input">
+                    <span class="details">Srednji</span>
+                    <input type="checkbox" name="kategorija3"  value="srednji">
+                </div>
+                <div class="input">
+                    <span class="details">Veliki</span>
+                    <input type="checkbox" name="kategorija3"  value="veliki">
+                </div>
+                <div class="input">
+                    <span class="details">Jako veliki</span>
+                    <input type="checkbox" name="kategorija3"  value="jako_veliki">
+                </div>
+
+            </div>
+            <div class="button">
+                <input type="submit" value="Potvrdi">
+            </div>
+
+        </form>
+            <form method="get" action="http://localhost:3000">
+                <div class="button">
+                    <input type="submit" value="Nazad">
+                </div>
+            </form>
+            <%if(greska){%>
+            <span style="color: red">Morate odabrati karakteristiku!</span>
+            <%}%>
+            <%if(greska2){%>
+                <span style="color: red">Možete izabrati samo jednu veličinu!</span>
+            <%}%>
+        </div>
+    </body>
+</html>
