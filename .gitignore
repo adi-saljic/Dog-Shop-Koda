@@ -1,0 +1,63 @@
+# Compiled source files
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environment
+env/
+venv/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archives and compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# OS generated files
+*.swp
+*.bak
+*.tmp
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+*.out
+
+# Git specific files
+*.orig
+*.rej

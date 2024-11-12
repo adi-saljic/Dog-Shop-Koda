@@ -44,7 +44,7 @@
   <div class="single-pro-details">
     <div class="opispsa"><h2>Rasa: <%=pas.rasa%></h2>
     <h2>Cijena: <%=pas.cijena%> KM</h2>
-    </div>
+    
     <br>
     <h5>Spol: <%=pas.spol%></h5>
     <h5>Lokacija: <%=pas.grad%> / <%=pas.drzava%></h5>
@@ -55,6 +55,7 @@
     <br>
       <%if(pas.mjesanac !== ''){%>  <span>Pas je mješanac sljedećih rasa: <%=pas.mjesanac%> </span> <%}%>
       <a href="/opisTrgovca/<%=pas.id_uzgajivaca%>">Pogledaj više o trgovcu</a>
+    </div>
   </div>
 </section>
 
